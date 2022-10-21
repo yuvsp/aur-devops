@@ -1,14 +1,9 @@
 pipeline {
-    agent none 
+    agent { docker { image 'python:3.10.7-alpine' } }
     stages {
-        stage('Build') { 
-            agent {
-                docker {
-                    image 'python:3.10.7-alpine' 
-                }
-            }
+        stage('build') {
             steps {
-                echo 'hmmp'
+                sh 'python --version'
             }
         }
     }
