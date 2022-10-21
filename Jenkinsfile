@@ -1,13 +1,15 @@
 pipeline {
-    agent any
-
+    agent none 
     stages {
-        stage('Run Python Script') {
+        stage('Build') { 
+            agent {
+                docker {
+                    image 'python:3.10.7-alpine' 
+                }
+            }
             steps {
-                echo 'main.py'
+                echo 'hmmp'
             }
         }
     }
 }
-
-
