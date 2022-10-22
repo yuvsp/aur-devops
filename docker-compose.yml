@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  jenkins:
+    privileged: true
+    user: root
+    ports:
+     - 8080:8080
+     - 50000:50000
+    container_name: jenkins
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image: yuval-jenkins-server:lts
+    volumes:
+      - j-ysp:/var/jenkins_home
+volumes:
+  j-ysp:
