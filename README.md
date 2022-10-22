@@ -1,6 +1,6 @@
 # aur-devops
 
-This repository aimed to deliver a pre-configured Jenkins server, inside a docker container: built via docker-compose file, using a Dockerfile, and equipped with Python to interact with SCM and print an indication.
+This repository aimed to deliver a pre-configured Jenkins server with jenkinsfile 'recipe', inside a docker container: built via docker-compose file, using a Dockerfile, and equipped with Python to interact with SCM and print an indication.
 
 
 Main challenges:
